@@ -1,0 +1,18 @@
+==============================================================================
+Tests                                                                         
+==============================================================================
+Tests.testDemo6 :: To Validate the Login form                                 
+==============================================================================
+Validate UnSuccessful Login                                           | PASS |
+------------------------------------------------------------------------------
+Validate cards display in Shopping page                               | PASS |
+------------------------------------------------------------------------------
+Fill the Login Details and Select the User option                     | PASS |
+------------------------------------------------------------------------------
+Tests.testDemo6 :: To Validate the Login form                         | PASS |
+3 tests, 3 passed, 0 failed
+==============================================================================
+Tests                                                                 | PASS |
+3 tests, 3 passed, 0 failed
+==============================================================================
+Output:  C:\Users\dbhargav.c\PycharmProjects\RobotFrameworkTest\pythonProject\pabot_results\5\output.xml
