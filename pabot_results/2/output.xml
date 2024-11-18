@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.11.5 on win32)" generated="2024-11-14T23:51:50.705895" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\dbhargav.c\PycharmProjects\RobotFrameworkTest\pythonProject\Tests">
+<suite id="s1-s1" name="testDemo3" source="C:\Users\dbhargav.c\PycharmProjects\RobotFrameworkTest\pythonProject\Tests\testDemo3.robot">
+<test id="s1-s1-t1" name="Validate Child Window Functionality" line="11">
+<kw name="Open the browser with the mortgage payment url" owner="Generic" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-14T23:51:51.485491" level="INFO">Opening browser 'chrome' to base url 'https://rahulshettyacademy.com/loginpagePractise'.</msg>
+<arg>url=${url}</arg>
+<arg>browser=${browserName}</arg>
+<arg>options=add_experimental_option("detach",${True})</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-14T23:51:51.485491" elapsed="9.026608"/>
+</kw>
+<status status="PASS" start="2024-11-14T23:51:51.485491" elapsed="9.027606"/>
+</kw>
+<kw name="Select the link of child window">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-14T23:52:00.515636" level="INFO">Clicking element 'xpath://a[@class='blinkingText']'.</msg>
+<arg>xpath://a[@class='blinkingText']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-14T23:52:00.514624" elapsed="3.033222"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-14T23:52:08.550115" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-14T23:52:03.548845" elapsed="5.002285"/>
+</kw>
+<status status="PASS" start="2024-11-14T23:52:00.513613" elapsed="8.037517"/>
+</kw>
+<kw name="verify user is switched to child window">
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-11-14T23:52:08.554653" elapsed="0.106549"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-11-14T23:52:08.676676" level="INFO">Verifying element 'xpath://div[@class ='inner-box']' contains exact text 'DOCUMENTS REQUEST'.</msg>
+<arg>xpath://div[@class ='inner-box']</arg>
+<arg>DOCUMENTS REQUEST</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-11-14T23:52:08.675677" elapsed="3.516050"/>
+</kw>
+<status status="PASS" start="2024-11-14T23:52:08.552642" elapsed="3.639085"/>
+</kw>
+<kw name="Grab the email id from the child window">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-11-14T23:52:12.259443" level="INFO">${text} = Please email us at mentor@rahulshettyacademy.com with below template to receive response</msg>
+<var>${text}</var>
+<arg>css:.red</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-14T23:52:12.191727" elapsed="0.067716"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2024-11-14T23:52:12.260525" level="INFO">@{words} = [ Please email us  |  mentor@rahulshettyacademy.com with below templ | e to receive response ]</msg>
+<var>@{words}</var>
+<arg>${text}</arg>
+<arg>at</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2024-11-14T23:52:12.259725" elapsed="0.000800"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2024-11-14T23:52:12.260525" level="INFO">${text_split} =  mentor@rahulshettyacademy.com with below templ</msg>
+<var>${text_split}</var>
+<arg>${words}</arg>
+<arg>1</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2024-11-14T23:52:12.260525" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-14T23:52:12.260525" level="INFO"> mentor@rahulshettyacademy.com with below templ</msg>
+<arg>${text_split}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-14T23:52:12.260525" elapsed="0.000000"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2024-11-14T23:52:12.260525" level="INFO">@{words2} = [ mentor@rahulshettyacademy.com | with | below | templ ]</msg>
+<var>@{words2}</var>
+<arg>${text_split}</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2024-11-14T23:52:12.260525" elapsed="0.000000"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2024-11-14T23:52:12.264536" level="INFO">${email} = mentor@rahulshettyacademy.com</msg>
+<var>${email}</var>
+<arg>${words2}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2024-11-14T23:52:12.260525" elapsed="0.004011"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-11-14T23:52:12.264536" level="INFO">${email} = mentor@rahulshettyacademy.com</msg>
+<arg>${email}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-11-14T23:52:12.264536" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-11-14T23:52:12.191727" elapsed="0.072809"/>
+</kw>
+<kw name="switch back to parent window">
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>MAIN</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-11-14T23:52:12.264536" elapsed="0.054214"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-11-14T23:52:12.350171" level="INFO">Page title is 'LoginPage Practise | Rahul Shetty Academy'.</msg>
+<arg>LoginPage Practise | Rahul Shetty Academy</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-11-14T23:52:12.319749" elapsed="0.030422"/>
+</kw>
+<status status="PASS" start="2024-11-14T23:52:12.264536" elapsed="0.085635"/>
+</kw>
+<kw name="Enter email id in username field in parent window">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-14T23:52:12.352268" level="INFO">Typing text 'mentor@rahulshettyacademy.com' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-14T23:52:12.351167" elapsed="0.421500"/>
+</kw>
+<status status="PASS" start="2024-11-14T23:52:12.351167" elapsed="0.421500"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-14T23:52:12.772667" elapsed="6.743143"/>
+</kw>
+<tag>SMOKE</tag>
+<status status="PASS" start="2024-11-14T23:51:51.483477" elapsed="28.032333"/>
+</test>
+<doc>To Validate the Login form</doc>
+<status status="PASS" start="2024-11-14T23:51:50.779101" elapsed="28.736709"/>
+</suite>
+<status status="PASS" start="2024-11-14T23:51:50.739538" elapsed="28.776272"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">SMOKE</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="testDemo3">Tests.testDemo3</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,37 @@
+==============================================================================
+Tests                                                                         
+==============================================================================
+Tests.testDemo5 :: To Validate the Login form                                 
+==============================================================================
+Invalid Username                                                        
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\dbhargav.c\PycharmProjects\RobotFrameworkTest\pythonProject\Tests\testDemo5.robot:13
+    T:  Invalid Username    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\dbhargav.c\PycharmProjects\RobotFrameworkTest\pythonProject\Tests\testDemo5.robot:16
+      Validate UnSuccessful Login    username=test7788    password= learning
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\dbhargav.c\PycharmProjects\RobotFrameworkTest\pythonProject\Tests\testDemo5.robot:21
+      Verify error message is correct    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\dbhargav.c\PycharmProjects\RobotFrameworkTest\pythonProject\Tests\testDemo5.robot:37
+      Should Be Equal As Strings    ${result}    Incorrect username/password.
+      |  ${result} =  (str)
+______________________________________________________________________________
+| FAIL |
+!= Incorrect username/password.
+------------------------------------------------------------------------------
+Invalid Username                                                      | PASS |
+------------------------------------------------------------------------------
+Special Characters                                                    | PASS |
+------------------------------------------------------------------------------
+Login with user 1234 and password 1234                                | PASS |
+------------------------------------------------------------------------------
+Tests.testDemo5 :: To Validate the Login form                         | FAIL |
+4 tests, 3 passed, 1 failed
+==============================================================================
+Tests                                                                 | FAIL |
+4 tests, 3 passed, 1 failed
+==============================================================================
+Output:  C:\Users\dbhargav.c\PycharmProjects\RobotFrameworkTest\pythonProject\pabot_results\4\output.xml

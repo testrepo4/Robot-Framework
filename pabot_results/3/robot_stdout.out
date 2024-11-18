@@ -1,0 +1,35 @@
+==============================================================================
+Tests                                                                         
+==============================================================================
+Tests.testDemo4 :: To validate unsuccessful login                             
+==============================================================================
+Invalid Username Valid Password                                         
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\dbhargav.c\PycharmProjects\RobotFrameworkTest\pythonProject\Tests\testDemo4.robot:12
+    T:  Invalid Username Valid Password    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\dbhargav.c\PycharmProjects\RobotFrameworkTest\pythonProject\Tests\testDemo4.robot:12
+      Validate UnSuccessful Login    test7788    learning
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\dbhargav.c\PycharmProjects\RobotFrameworkTest\pythonProject\Tests\testDemo4.robot:22
+      Verify error message is correct    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\dbhargav.c\PycharmProjects\RobotFrameworkTest\pythonProject\Tests\testDemo4.robot:39
+      Element Text Should Be    ${Login_Validation_Error_Message}    Incorrect username/password.
+      |  ${Login_Validation_Error_Message} = css:.alert-danger (str)
+______________________________________________________________________________
+| FAIL |
+The text of element 'css:.alert-danger' should have been 'Incorrect username/password.' but it was ''.
+------------------------------------------------------------------------------
+valid Username InValid Password                                       | PASS |
+------------------------------------------------------------------------------
+Special Characters                                                    | PASS |
+------------------------------------------------------------------------------
+Tests.testDemo4 :: To validate unsuccessful login                     | FAIL |
+3 tests, 2 passed, 1 failed
+==============================================================================
+Tests                                                                 | FAIL |
+3 tests, 2 passed, 1 failed
+==============================================================================
+Output:  C:\Users\dbhargav.c\PycharmProjects\RobotFrameworkTest\pythonProject\pabot_results\3\output.xml
